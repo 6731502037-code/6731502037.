@@ -1,0 +1,100 @@
+:root {
+    --primary-color: #3498db;
+    --background-color: #f4f4f9;
+    --text-color: #333;
+    --tube-bg: #e0e0e0;
+    --tube-border: #bdc3c7;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 350px;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.status-panel {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    display: flex;
+    justify-content: space-around;
+}
+
+.gravity-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 2rem;
+    height: 300px;
+}
+
+.gravity-tube {
+    width: 60px;
+    background: var(--tube-bg);
+    border: 2px solid var(--tube-border);
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden; /* Keep the icon inside */
+}
+
+.icon {
+    font-size: 2.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth falling/rising */
+    top: 0%; /* Default position (Wet) */
+}
+
+.markers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #999;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.water-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.water-btn:hover {
+    background-color: #2980b9;
+}
+
+.water-btn:active {
+    transform: scale(0.98);
+}
+
+#connection-status {
+    font-weight: bold;
+}

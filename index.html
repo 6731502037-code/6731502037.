@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravity Meter - Soil Moisture Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Using MQTT.js from CDN -->
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Gravity Meter</h1>
+        <div class="status-panel">
+            <p>Status: <span id="connection-status">Disconnected</span></p>
+            <p>Moisture: <span id="moisture-value">--</span>%</p>
+        </div>
+
+        <div class="gravity-wrapper">
+            <div class="gravity-tube">
+                <div id="gravity-icon" class="icon">💧</div>
+            </div>
+            <div class="markers">
+                <span>100% (Wet)</span>
+                <span>0% (Dry)</span>
+            </div>
+        </div>
+
+        <button id="water-btn" class="water-btn">RESTORE GRAVITY (WATER)</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
